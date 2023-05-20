@@ -65,29 +65,75 @@
 // значення '1', то у змінну result запишемо 'зима', якщо має значення
 // '2' - 'весна' і так далі. Розв'яжіть завдання через switch-case.
 
-const num = prompt("Введіть число!");
-let result = '';
-switch (num) {
-  case '1':
-    result='зима';
-    break;
+// const num = prompt("Введіть число!");
+// let result = '';
+// switch (num) {
+//   case '1':
+//     result='зима';
+//     break;
 
-  case '2':
-    result='весна';
-    break;
+//   case '2':
+//     result='весна';
+//     break;
 
-  case '3':
-    result='літо';
-    break;
+//   case '3':
+//     result='літо';
+//     break;
 
-  case '4':
-    result='осінь';
-    break;
+//   case '4':
+//     result='осінь';
+//     break;
 
+//   default:
+//     result='Введіть число від 1 до 4!';
+
+// }
+// alert(result)
+
+
+// ******************===
+//Напишіть код, який буде питати
+//логін за допомогою prompt и логіровати результат
+//в консоль браузера
+
+//Якщо користувач вводить "Адмін",
+//то prompt запрашує пароль.
+//Якщо ничого не ввели чи нажата клавіша Esc
+//вивести строку "Скасовано"
+//В противному випадку вивести рядок "Я вас не знаю"
+
+//Пароль перевіряти так:
+//Якщо введен пароль "Я головний",
+//то вивести рядок "Вітаю!"
+//в іншому випадку виводити рядок "Невірний пароль!"
+
+const userLogin = prompt("Введіть логін!");
+
+console.log(userLogin);
+// if (userLogin === "Адмін") {
+//   let userPassword = prompt("Введіть пароль");
+//   // if (userPassword === "Я головний") {
+//   //   alert("Вітаю!");
+//   // } else {
+//   //   alert("Невірний пароль!");
+//   // }
+//   alert(userPassword === "Я головний" ? "Вітаю!" : "Невірний пароль!");
+// } else if (userLogin === "" || userLogin === null) {
+//   alert("Скасовано");
+// } else {
+//   alert("Я вас не знаю");
+// }
+switch (userLogin) {
+  case "Адмін":
+    let userPassword = prompt("Введіть пароль");
+    alert(userPassword === "Я головний" ? "Вітаю!" : "Невірний пароль!");
+    break;
+  
+  case "":
+    case null:
+      alert("Скасовано");
+    break;
+  
   default:
-    result='Введіть число від 1 до 4!';
-
+    alert("Я вас не знаю");
 }
-alert(result)
-
-
