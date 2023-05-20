@@ -177,16 +177,51 @@
 //введе число більше 100, чи не натисне кнопку
 //Cancel в prompt
 
-let num = prompt("Введіть число більше 100!");
-while (num <= 100) {
-  num = prompt("Введіть число більше 100!");
-  if (num === null) {
-    break;
-  }
+// let num = prompt("Введіть число більше 100!");
+// while (num <= 100) {
+//   num = prompt("Введіть число більше 100!");
+//   if (num === null) {
+//     break;
+//   }
+// }
+// if (num) {
+//   alert(num);
+// }
+
+// -========== 08
+// В змінній minuteValue є число від 0 до 59.
+// Визначте до якої чверті години входить
+// це число(в першу, другу, треттю чи четверту).
+
+const minuteValue = Math.floor(Math.random() * (59 - 0) + 0);
+
+// if (minuteValue <= 15) {
+//   console.log(`${minuteValue } -  в першу чверть`);
+// } else if ( minuteValue <=30) {
+//   console.log(`${minuteValue } -  в другу чверть`);
+// } else if ( minuteValue <=45) {
+//   console.log(`${minuteValue } -  в треттю чверть`);
+// } else  {
+//   console.log(`${minuteValue } -  в четверту чверть`);
+// }
+
+
+if (minuteValue >= 0 && minuteValue <= 15) {
+  console.log(`${minuteValue } -  в першу чверть`);
+} 
+
+if ( minuteValue > 15 && minuteValue <= 30) {
+  console.log(`${minuteValue } -  в другу чверть`);
+} 
+
+if ( minuteValue > 30 && minuteValue <= 45) {
+  console.log(`${minuteValue } -  в треттю чверть`);
+} 
+
+if (minuteValue > 45 ) {
+  console.log(`${minuteValue } -  в четверту чверть`);
 }
-if (num) {
-  alert(num);
-}
+
 
 
 
