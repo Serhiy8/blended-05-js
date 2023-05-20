@@ -222,6 +222,7 @@ if (minuteValue > 45 ) {
   console.log(`${minuteValue } -  в четверту чверть`);
 }
 
+//// The End
 
 
 
