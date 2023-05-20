@@ -30,5 +30,32 @@
 
 // console.log(`${hours}:${minutes}`);
 
+// Task-3
 
+//Напишіть цикл, який виводить в консоль
+//числа от max до min по зменьшенню
+//Виведіть в консоль суму усіх парних чисел
 
+// const min = 1;
+// const max = 10;
+
+// let sum = 0;
+
+// // for (let i = max; i >= min; i -= 1) {
+// //   console.log(i);
+
+// //   if (i % 2 === 0) {
+// //     sum += i;
+// //   }
+// // }
+
+// for (let i = max; i >= min; i -= 1) {
+//   console.log(i);
+
+//   if (i % 2 !== 0) {
+//     continue;
+//   }
+
+//   sum += i;
+// }
+// console.log(sum);
