@@ -174,17 +174,170 @@
 //збережіть його результат в змінній sum.
 //Якщо об'єкт salaries пустий, то результат має бути 0
 
-const salaries = {
-    Mango: 100,
-    Poly: 160,
-    Ajax: 1470,
-  };
+// const salaries = {
+//     Mango: 100,
+//     Poly: 160,
+//     Ajax: 1470,
+//   };
 
-const salarisItems = Object.values(salaries);
+// const salarisItems = Object.values(salaries);
 
-let sum = 0;
-for (const item of salarisItems  ) {
-sum += item;
-}
+// let sum = 0;
+// for (const item of salarisItems  ) {
+// sum += item;
+// }
 
-console.log(sum)
+// console.log(sum)
+
+// ************************************gfgd
+
+// 7. Напишіть скрипт керування особистим кабінетом інтернет банка
+//Є об'єкт account в якому необхідно реалізувати
+//методи для работи з балансом та історією транзакцій
+
+//Типів транзакцій всього два.
+//Можна покласти або зняти гроші з рахунка
+const Transaction = {
+  DEPOSIT: "deposit",
+  WITHDRAW: "withdraw",
+};
+
+
+
+
+//Кожна транзакція це об'єкт з властивостями id, type, amount
+
+const account = {
+  //поточний баланс рахунка
+  balance: 0,
+
+  //Історія транзакцій
+  transactions: [],
+
+  //Метод створює і повертає об'єкт транзакцій
+  //Приймає сумму і тип транзакцій
+  createTransaction(type, amount) {
+    return {
+      type,
+      amount,
+    };
+  },
+
+  
+  //Метод відповідає за додавання сумми к балансу.
+  //Приймає сумму транзакціи.
+  //Визиває createTransaction для створення об'єкта транзакціи
+  //після чого додає його в історію транзакцій
+  deposit(amount) {
+    this.balance += amount;
+    const transaction = this.createTransaction(Transaction.DEPOSIT, amount);
+    this.transactions.push({ ...transaction, id: Number(Math.random().toFixed(4)) });
+  },
+//Метод відповідає за зняття сумми з балансу.
+  //Приймає сумму транзакціи.
+  //Визиває createTransaction для створення об'єкта транзакціи
+  //після чого додає йогого в історю транзакцій
+  //Якщо amount більше ніж поточний баланс, виводимо повідомлення про те,
+  //що недостатньо коштів на рахунку
+  withdraw(amount) {
+    if (this.balance < amount) {
+      alert("Грошей недостатньо!");
+      return;
+    }
+
+    this.balance -= amount;
+    const transaction = this.createTransaction(Transaction.WITHDRAW, amount);
+    this.transactions.push({ ...transaction, id: 1 });
+  },
+//Метод повертає поточний баланс
+  getBalance() {
+     console.log(`На вашому рахунку ${this.balance} грн`);
+  },
+//Метод шукає і повертає об'єкт транзакціи по id
+  getTransactionDetails(id) {
+    for (const transaction of this.transactions) {
+      if (transaction.id === id) {
+        return transaction;
+      }
+    }
+    return "Такої транзакції немає"
+  },
+//Метод повертає кількіств коштів вказаного типу
+  //транзакціи зі всієї історії транзакцій
+  getTransactionType(type) {
+    let totalSum = 0;
+
+    for (const transaction of this.transactions) {
+    
+      if (transaction.type === type) {
+        totalSum += transaction.amount;
+      }
+    }
+    return totalSum;
+  },
+} 
+
+account.deposit(400);
+console.log(account.transactions);
+
+account.withdraw(200);
+console.log(account.transactions);
+
+// account.withdraw(600);
+
+account.getBalance()
+
+console.log(account.getTransactionDetails(1));
+
+console.log(account.getTransactionType(Transaction.DEPOSIT));
+
+//HOMEWORK:
+// 1. Напишіть функцію min(a, b), яка повертає
+// меньше з чисел a, b
+//Додати перевірку, що функція отримує числа
+
+// 2. Написати ф-цію, яка прибиратиме з масиву всі значення, які перетворюються на false
+// undefined, null, false, '', 0, NaN
+
+// const array = [
+//   1,
+//   0,
+//   54,
+//   "doc",
+//   null,
+//   "jpg",
+//   undefined,
+//   "",
+//   "png",
+//   "exe",
+//   false,
+//   "mp4",
+//   NaN,
+//   "hbs",
+// ];
+
+// 3. напиши функцію яка сумуватиме сусідні числа і пушити в новий масив
+// const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
+
+//4. Напишіть функцію caclculateAverage()
+//яка приймає довільну кількість
+//аргументів і повертає їхнє середнє значення.
+//Додати перевірку, що аргументи це числа.
+
+//5. Створіть об'єкт calculator з трьомя методами
+//read(a, b) - приймає два аргумента і зберігає їх
+//як властивості об'єкта
+//sum() повертає сумму збереженних значень (з перевіркою на наявніст властивостей в об'єкті)
+//mult() перемножає збереженні значення і повертає результат
+
+//6. Напишіть функцію, яка приймає як параметр об'єкт
+//і формує об'єкти в новому масиві у форматі [key, value]
+
+const user6 = {
+  name: "John",
+  surName: "Stones",
+  age: 20,
+  hobby: "tenis",
+  haveCar: true,
+  merried: false,
+};
