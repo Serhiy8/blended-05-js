@@ -62,3 +62,28 @@
 // }
 
 // logItems(logins);
+
+// --------------- TASK 04
+// Наступна функція повертає true, якщо параметр age більше 18.
+// В іншому випадку вона запитує підтвердження через confirm і повертає його результат:
+// Ext: code spell checker
+  
+const age = prompt("Enter your age");
+
+function checkAge(age) {
+//  if (age >= 18) {
+//     return true;
+//  }
+
+//  const check18 = confirm('Вам дійсно 18+?');
+//  return check18;
+
+if (age < 18) {
+    return confirm('Вам дійсно 18+?') 
+}
+
+return age >= 18;
+ 
+}
+
+console.log(checkAge(age)) 
