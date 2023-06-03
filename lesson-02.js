@@ -37,3 +37,28 @@
 // }
 
 // checkLogin(logins);
+
+
+
+
+// -------task_03 -----
+
+// Напишіть функцію logItems (array), яка приймає
+// масив і використовує цикл for, який для кожного елемента
+//буде виводити повідомлення у форматі:
+//<номер елемента> - <значення елемента>
+//Нумерація має починатись з 1
+
+// const logins = ["Peter", "John", "Igor", "Sasha"];
+
+// function logItems(array) { 
+
+//     for (let i = 0; i < array.length; i += 1) { 
+
+      
+//         console.log(`${i + 1} - ${array[i]}`);
+//     }
+
+// }
+
+// logItems(logins);
