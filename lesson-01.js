@@ -206,24 +206,30 @@ const minuteValue = Math.floor(Math.random() * (59 - 0) + 0);
 // }
 
 
-if (minuteValue >= 0 && minuteValue <= 15) {
-  console.log(`${minuteValue } -  в першу чверть`);
-} 
+// if (minuteValue >= 0 && minuteValue <= 15) {
+//   console.log(`${minuteValue } -  в першу чверть`);
+// } 
 
-if ( minuteValue > 15 && minuteValue <= 30) {
-  console.log(`${minuteValue } -  в другу чверть`);
-} 
+// if ( minuteValue > 15 && minuteValue <= 30) {
+//   console.log(`${minuteValue } -  в другу чверть`);
+// } 
 
-if ( minuteValue > 30 && minuteValue <= 45) {
-  console.log(`${minuteValue } -  в треттю чверть`);
-} 
+// if ( minuteValue > 30 && minuteValue <= 45) {
+//   console.log(`${minuteValue } -  в треттю чверть`);
+// } 
 
-if (minuteValue > 45 ) {
-  console.log(`${minuteValue } -  в четверту чверть`);
-}
+// if (minuteValue > 45 ) {
+//   console.log(`${minuteValue } -  в четверту чверть`);
+// }
 
 //// The End
 
 
 
 
+// Напиши функцію, яка перебирає масив логінів і перевіряє
+// чи є ім'я введене в інпут у цьому масиві і у разі,
+// якщо є - виводить повідомлення "Доступ дозволено"
+// в іншому випадку - "Користувач не знайден"
+
+// const logins = ["Peter", "John", "Igor", "Sasha"];
