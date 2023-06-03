@@ -15,7 +15,6 @@
 
 // console.log(styles);
 
-
 // **************task_02_02
 
 // Напиши функцію, яка перебирає масив логінів і перевіряє
@@ -38,9 +37,6 @@
 
 // checkLogin(logins);
 
-
-
-
 // -------task_03 -----
 
 // Напишіть функцію logItems (array), яка приймає
@@ -51,11 +47,10 @@
 
 // const logins = ["Peter", "John", "Igor", "Sasha"];
 
-// function logItems(array) { 
+// function logItems(array) {
 
-//     for (let i = 0; i < array.length; i += 1) { 
+//     for (let i = 0; i < array.length; i += 1) {
 
-      
 //         console.log(`${i + 1} - ${array[i]}`);
 //     }
 
@@ -67,10 +62,10 @@
 // Наступна функція повертає true, якщо параметр age більше 18.
 // В іншому випадку вона запитує підтвердження через confirm і повертає його результат:
 // Ext: code spell checker
-  
-const age = prompt("Enter your age");
 
-function checkAge(age) {
+//const age = prompt("Enter your age");
+
+//function checkAge(age) {
 //  if (age >= 18) {
 //     return true;
 //  }
@@ -78,12 +73,49 @@ function checkAge(age) {
 //  const check18 = confirm('Вам дійсно 18+?');
 //  return check18;
 
-if (age < 18) {
-    return confirm('Вам дійсно 18+?') 
-}
+//if (age < 18) {
+//    return confirm('Вам дійсно 18+?')
+//}
 
-return age >= 18;
- 
-}
+//return age >= 18;
 
-console.log(checkAge(age)) 
+//}
+
+//console.log(checkAge(age))
+
+//-----------task 05
+
+//Напишіть функції для роботи з масивом
+//add(name) додає ім'я до кінця колекції
+//remove(name) видаляє ім'я із колекції
+//update(oldName, newName) змінює ім'я на нове
+
+const names = ["Alla", "Petro", "Max", "Olena", "Boris"];
+
+function add(name) {
+  names.push(name);
+  return names;
+}
+console.log(add("Anna"));
+
+function remove(name) {
+  const index = names.indexOf(name);
+  if (index === -1) {
+    return "Не знайдено";
+  }
+
+  names.splice(index, 1);
+  return names;
+}
+console.log(remove("Anna"));
+console.log(remove("Kolya"));
+
+function update(oldName, newName) {
+  const index = names.indexOf(oldName);
+  if (index === -1) {
+    return "Не знайдено";
+  }
+  names.splice(index, 1, newName);
+  return names;
+}
+console.log(update("Boris", "Sunaki"));
