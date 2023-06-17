@@ -98,7 +98,6 @@
 //showProduct(product) - коллбек приймає об'єкт
 //продукта і логірує його в консоль
 
- 
 // function  makeProduct(name, price, callback ) {
 //    const product = {
 //     name,
@@ -211,10 +210,9 @@ const users = [
 
 // function getUserNames (users) {
 //     return users.map(user => user.name)
-    
+
 // }
 // console.log(getUserNames(users));
-
 
 // Task 2
 
@@ -223,13 +221,13 @@ const users = [
 
 // function getUsersWithEyeColor(users, eye) {
 //     return users.filter(user => user.eyeColor === eye);
-    
+
 // }
 // console.log(getUsersWithEyeColor(users, 'blue'));
 
 // function getUsersByProp(users, property, value) {
 //     return users.filter(user => user[property] === value);
-    
+
 // }
 // console.log(getUsersByProp(users, "eyeColor", "blue"));
 
@@ -240,7 +238,7 @@ const users = [
 
 // function calculateTotalBalance(users) {
 //     return users.reduce((total, user) => total + user.balance,0)
-    
+
 // }
 // console.log(calculateTotalBalance(users));
 
@@ -255,7 +253,34 @@ const users = [
 //     return users.flatMap(user => user.skills)
 //         .filter((user, index, array) => array.indexOf(user) === index)
 //     .sort((a,b) => a.localeCompare(b))
-    
+
 // }
 // console.log(getSortedUniqueSkills(users));
 
+// Task 7
+
+//Створити статистику - об'єкт, у якому вказується кількість тегів
+const tweets = [
+  { id: "000", likes: 5, tags: ["js", "nodejs"] },
+  { id: "001", likes: 2, tags: ["html", "css"] },
+  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+  { id: "003", likes: 8, tags: ["css", "react"] },
+  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+];
+
+// const stats = {};
+// tweets
+//   .flatMap((tweet) => tweet.tags)
+//   .forEach((tag) => {
+//     if (stats[tag]) {
+//       stats[tag] += 1;
+//     } else {
+//       stats[tag] = 1;
+//     }
+//   });
+// const stats = tweets
+//   .flatMap((tweet) => tweet.tags)
+//   .reduce((stats, tag) => {
+//     return { ...stats, [tag]: stats[tag] ? stats[tag] + 1 : 1 };
+//   }, {});
+// console.log(stats);
