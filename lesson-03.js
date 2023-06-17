@@ -238,8 +238,24 @@ const users = [
 // Отримати загальну суму баланса (поле balance) усіх користувачів.
 // console.log(calculateTotalBalance(users)); // 20916
 
-function calculateTotalBalance(users) {
-    return users.reduce((total, user) => total + user.balance,0)
+// function calculateTotalBalance(users) {
+//     return users.reduce((total, user) => total + user.balance,0)
     
-}
-console.log(calculateTotalBalance(users));
+// }
+// console.log(calculateTotalBalance(users));
+
+// Task 5
+
+// Отримати масив всіх навичок усіх користувачів (поле skills), при цьому не повинно бути
+// повторювань навичок і вони мають бути відсортовані в алфавітному порядку.
+// console.log(getSortedUniqueSkills(users));
+// [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
+
+// function getSortedUniqueSkills(users) {
+//     return users.flatMap(user => user.skills)
+//         .filter((user, index, array) => array.indexOf(user) === index)
+//     .sort((a,b) => a.localeCompare(b))
+    
+// }
+// console.log(getSortedUniqueSkills(users));
+
