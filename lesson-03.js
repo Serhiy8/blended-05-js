@@ -60,3 +60,57 @@
 // };
 
 // askPassword(user.loginOk.bind(user), user.loginFail.bind(user));
+
+// ----------------------------------------------task 05 -----------------------------
+// Колбек-функції!!!
+
+//1. Напишіть дві функції
+// letMeSeeYourName(callback) - питає ім'я користувача
+//через prompt и викликає callback функцію
+//greet(name) - коллбек, якій приймає ім'я та логірує в консоль
+//рядок "Привіт, <name>"
+//Реалізуй перевірку, що prompt не пустий
+// якщо пустий - додай дефолтне значення
+
+// function letMeSeeYourName(callback) {
+//   let nameUser = prompt("What is your name :");
+//   if (nameUser.trim() === "") {
+//     nameUser = "гість";
+//   }
+//   callback(nameUser);
+// }
+
+// function greet(name) {
+// //   if (name.trim() === "") {
+// //     name = "гість";
+// //   }
+//   console.log(`Привіт, ${name}`);
+// }
+// letMeSeeYourName(greet);
+
+// ----------------------------------------------task 06 -----------------------------
+//2. Напишіть дві функції
+//makeProduct(name, price, callback) - приймає
+//ім'я та ціну товара, а також callback.
+//Функція створює об'єкт товара, додавая йому унікальний
+//ідентифікатор у властивість id та викликає callback
+//передавая йому створений об'єкт.
+//showProduct(product) - коллбек приймає об'єкт
+//продукта і логірує його в консоль
+
+ 
+// function  makeProduct(name, price, callback ) {
+//    const product = {
+//     name,
+//     price,
+//     id : Date.now(),
+//    }; 
+//  callback(product);
+// };
+
+// function showProduct(product) {
+//   console.log(product);  
+// }
+
+// makeProduct('apple', 10, showProduct);
+
