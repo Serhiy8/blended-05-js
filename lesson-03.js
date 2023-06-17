@@ -284,3 +284,159 @@ const tweets = [
 //     return { ...stats, [tag]: stats[tag] ? stats[tag] + 1 : 1 };
 //   }, {});
 // console.log(stats);
+
+// ------------------------------------------------------------------------
+// Класи
+
+//1. Створи клас User для створення користувача з такими властивостями:
+//a. userName - ім'я, рядок
+//b. age - вік, число
+//c. numbersOfPost - кількість постів, число
+//d. конструктор очікує 1 параметр - об'єкт налаштувань з однойменними властивостями
+//Додай метод getInfo(), який повертає рядок:
+//`Користувачеві ${} ${} років і в нього ${} публікацій.`
+
+// class User {
+//     constructor ({userName, age, numbersOfPost}) {
+//         this.userName = userName;
+//         this.age = age;
+//         this.numbersOfPost = numbersOfPost;
+//     }
+//     getInfo() {
+//         return `Користувачеві ${this.userName} ${this.age} років і в нього ${this.numbersOfPost} публікацій.`;
+//     } 
+// }
+
+// const userOne = new User({userName : "Vasyl", age : 27, numbersOfPost :3});
+// console.log(userOne);
+// console.log(userOne.getInfo());
+
+// ------------------------------------------------------------------------
+//2. Напиши класс Client який створює об'єкт
+//із властивостями login, email
+//Об'яви приватні властивості #login і #email,
+//доступ до яких зроби через геттер и сеттер:
+// get getClientData() має повертати об'єкт з переліченими властивостями
+// set changeEmail(newEmail) перезаписує пошту користувача
+
+// class Client {
+//     #login;
+//     #email;
+//     constructor (login, email) {
+//         this.#login = login;
+//         this.#email = email;
+//     }
+
+//     get getClientData() {
+//         return {loginClient :  this.#login, emailClient : this.#email}
+//     }
+
+//     set changeEmail(newEmail) {
+//         this.#email = newEmail;
+//     }
+// }
+
+
+// const clientOne = new Client ('Admin', 'admin@email.com');
+
+// console.log(clientOne);
+// clientOne.changeEmail = 'owner@email.com';
+// console.log(clientOne.getClientData);
+
+// ------------------------------------------------------------
+// 4. Створити клас Worker, у якого є властивості name, age, salary.
+//У класу Worker є метод getSalary, який повертає повідомлення
+//"Worker <name> has salary <salary> dollars"
+//Створити клас TopLevelWorker, у якого є властивість position
+//і який успадковує клас Worker, додаючи метод getPosition
+// який повертає повідомлення "<name> works as <position>"
+
+
+// class Worker {
+
+//     constructor (name, age, salary) {
+//         this.name = name;
+//         this.age = age; 
+//         this.salary = salary;
+//     }
+
+//     getSalary() {
+//         return `Worker ${this.name} has salary ${this.salary} dollars`;
+//     }
+// }
+
+// class TopLevelWorker extends Worker {
+// constructor (name, age, salary, position) {
+//     super(name, age, salary);
+//     this.position = position;
+// }
+
+// getPosition() {
+//     return `${this.name} works as ${this.position}`
+// }
+// };
+
+// const workerOne = new TopLevelWorker('Ivan', 33, 1500, 'proger');
+
+// console.log(workerOne );
+// console.log(workerOne.getPosition());
+// console.log(workerOne.getSalary());
+
+// HOME WORKE !!! ----------------------- after 6 modul
+// --- 1
+//3. Напиши класс Notes який управляє коллекцієй нотаток у
+//властивості items.
+//Нотатка це  об'єкт з властивостями text, priority
+//Додай класу статичну властивість Priopity,
+//в якій буде зберігатись об'єкт з пріорітетами ("hight", "middle", "low").
+//Додай методи addNote(note), removeNote(noteText)
+//updatePriority(noteText, newPriority)
+// --- 2
+//  Написати клас, який буде представляти зоопарк тварин.
+//  Створити загальний клас Animal для тварин.
+// У зоопарку повинні бути різні типи тварин, такі як ссавці, птахи, рептилії тощо.
+// Кожен тип тварин повинен мати свої властивості та методи, наприклад,
+//  методи для отримання інформації про тварину та для годівлі тварин.
+//  Крім того, зоопарк повинен мати метод для додавання тварин до списку та
+// метод для виведення списку всіх тварин у зоопарку.
+// --- 3
+//  Написати клас, який буде представляти зоопарк тварин.
+//  Створити загальний клас Animal для тварин.
+// У зоопарку повинні бути різні типи тварин, такі як ссавці, птахи, рептилії тощо.
+// Кожен тип тварин повинен мати свої властивості та методи, наприклад,
+//  методи для отримання інформації про тварину та для годівлі тварин.
+//  Крім того, зоопарк повинен мати метод для додавання тварин до списку та
+// метод для виведення списку всіх тварин у зоопарку.
+// ===================================================
+// Reverse. Напишіть функцію, яка розгортає масив у зворотному порядку.
+// Будь ласка, не використовуйте array.reverse(), щоб зробити завдання цікавішим.
+
+// const data = [10, 20, 30, 40, 50, 60];
+// const alphData = ["a", "b", "c", "d", "e"];
+// --- 4
+// Task 6
+//
+//Призначити знижку 20% на фрукти в масиві,
+//Присвоїти ID для кожного продукту
+//
+// const fruits = [
+//   { name: "apple", price: 200 },
+//   { name: "orange", price: 300 },
+//   { name: "grapes", price: 750 },
+// ]; 
+// --- 5
+/// Даний словник із міст та дат виступів рок-групи
+
+/// Необхідно перетворити словник (key-value) на масив із назв міст
+/// Виведення міст має бути у хронологічному порядку
+/// Міста у яких концерт вже пройшов потрібно виключити
+/// Результат ["Умань", "Харків", "Одеса"]
+
+// const concerts = {
+//   Київ: new Date("2023-04-01"),
+//   Умань: new Date("2023-07-02"),
+//   Вінниця: new Date("2022-04-21"),
+//   Одеса: new Date("2023-07-15"),
+//   Хмельницький: new Date("2022-04-18"),
+//   Харків: new Date("2023-07-10"),
+// };
