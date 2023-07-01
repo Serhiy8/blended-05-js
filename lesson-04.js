@@ -83,3 +83,29 @@
 //   elementPlay.style.top = `${randomither(100)}%`;
 //   elementPlay.style.left = `${randomither(100)}%`;
 // }
+
+// Створити червоний квадрат розміром 50 на 50 рх
+// Додати кнопку "Зменшити", яка робить квадрат менше на 10 пікселів
+// Додати кнопку "Збільшити", яка робить його більше на 10 пікселів.
+
+let sizeEl = 50;
+
+const markup = `<div style='background:red; width: ${sizeEl}px; height: ${sizeEl}px'></div> <button type='button' class='dec' >Зменшити</button><button type='button' class='incr'>Збільшити</button>`;
+document.body.insertAdjacentHTML("afterbegin", markup);
+
+const divEl = document.querySelector("div");
+const decrementBtn = document.querySelector(".dec");
+const incrBtn = document.querySelector(".incr");
+
+decrementBtn.addEventListener("click", onDecr);
+incrBtn.addEventListener("click", onIncr);
+
+function onDecr() {
+  if (sizeEl === 10) return;
+  sizeEl -= 10;
+  divEl.style.cssText = `background:red; width: ${sizeEl}px; height: ${sizeEl}px`;
+}
+function onIncr() {
+  sizeEl += 10;
+  divEl.style.cssText = `background:red;width: ${sizeEl}px; height: ${sizeEl}px`;
+}
