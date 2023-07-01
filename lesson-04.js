@@ -88,24 +88,46 @@
 // Додати кнопку "Зменшити", яка робить квадрат менше на 10 пікселів
 // Додати кнопку "Збільшити", яка робить його більше на 10 пікселів.
 
-let sizeEl = 50;
+// let sizeEl = 50;
 
-const markup = `<div style='background:red; width: ${sizeEl}px; height: ${sizeEl}px'></div> <button type='button' class='dec' >Зменшити</button><button type='button' class='incr'>Збільшити</button>`;
-document.body.insertAdjacentHTML("afterbegin", markup);
+// const markup = `<div style='background:red; width: ${sizeEl}px; height: ${sizeEl}px'></div> <button type='button' class='dec' >Зменшити</button><button type='button' class='incr'>Збільшити</button>`;
+// document.body.insertAdjacentHTML("afterbegin", markup);
 
-const divEl = document.querySelector("div");
-const decrementBtn = document.querySelector(".dec");
-const incrBtn = document.querySelector(".incr");
+// const divEl = document.querySelector("div");
+// const decrementBtn = document.querySelector(".dec");
+// const incrBtn = document.querySelector(".incr");
 
-decrementBtn.addEventListener("click", onDecr);
-incrBtn.addEventListener("click", onIncr);
+// decrementBtn.addEventListener("click", onDecr);
+// incrBtn.addEventListener("click", onIncr);
 
-function onDecr() {
-  if (sizeEl === 10) return;
-  sizeEl -= 10;
-  divEl.style.cssText = `background:red; width: ${sizeEl}px; height: ${sizeEl}px`;
-}
-function onIncr() {
-  sizeEl += 10;
-  divEl.style.cssText = `background:red;width: ${sizeEl}px; height: ${sizeEl}px`;
+// function onDecr() {
+//   if (sizeEl === 10) return;
+//   sizeEl -= 10;
+//   divEl.style.cssText = `background:red; width: ${sizeEl}px; height: ${sizeEl}px`;
+// }
+// function onIncr() {
+//   sizeEl += 10;
+//   divEl.style.cssText = `background:red;width: ${sizeEl}px; height: ${sizeEl}px`;
+// }
+
+/*
+Завдання 3
+Кнопка "Приховати" ховає текст і замінює назву кнопки на
+"Розкрити", при повторному натисканні текст знову стає доступним
+і кнопка набуває початкового вигляду.
+*/
+
+const inputEl = document.querySelector('#passwordInput');
+const btnEl = document.querySelector('#passwordButton');
+
+btnEl.addEventListener('click', stels);
+
+function stels() {
+  if (btnEl.textContent === 'Розкрити') {
+    inputEl.style.color = 'inherit';
+    btnEl.textContent = 'Приховати';
+  } else {
+    inputEl.style.color = 'transparent';
+    btnEl.textContent = 'Розкрити';
+  } 
 }
