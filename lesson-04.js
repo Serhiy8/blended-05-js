@@ -117,17 +117,17 @@
 і кнопка набуває початкового вигляду.
 */
 
-const inputEl = document.querySelector('#passwordInput');
-const btnEl = document.querySelector('#passwordButton');
+// const inputEl = document.querySelector('#passwordInput');
+// const btnEl = document.querySelector('#passwordButton');
 
-btnEl.addEventListener('click', stels);
+// btnEl.addEventListener('click', stels);
 
-function stels() {
-  if (btnEl.textContent === 'Розкрити') {
-    inputEl.style.color = 'inherit';
-    btnEl.textContent = 'Приховати';
-  } else {
-    inputEl.style.color = 'transparent';
-    btnEl.textContent = 'Розкрити';
-  } 
-}
+// function stels() {
+//   if (btnEl.textContent === 'Розкрити') {
+//     inputEl.style.color = 'inherit';
+//     btnEl.textContent = 'Приховати';
+//   } else {
+//     inputEl.style.color = 'transparent';
+//     btnEl.textContent = 'Розкрити';
+//   } 
+// }
