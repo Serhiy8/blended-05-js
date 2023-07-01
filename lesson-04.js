@@ -157,11 +157,24 @@
 у кожному елементі списку у 2 рази
 */
 
-const items = document.querySelectorAll(".listItem");
-const btn = document.querySelector("#double");
+// const items = document.querySelectorAll(".listItem");
+// const btn = document.querySelector("#double");
 
-btn.addEventListener("click", doubleItem);
+// btn.addEventListener("click", doubleItem);
 
-function doubleItem() {
-  items.forEach((el) => (el.textContent *= 2));
-}
+// function doubleItem() {
+//   items.forEach((el) => (el.textContent *= 2));
+// }
+
+/*
+Завдання 13
+Коло має зникати при наведенні на нього. 
+При цьому позиція сусідніх кіл має залишатися незмінною.
+*/
+
+const items = document.querySelectorAll('.gridItem');
+
+items.forEach(item => {
+item.addEventListener('mouseenter', () => item.classList.add('hide'))
+item.addEventListener('mouseleave', ()=> item.classList.remove('hide'))
+});
