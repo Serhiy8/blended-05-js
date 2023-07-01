@@ -131,3 +131,22 @@
 //     btnEl.textContent = 'Розкрити';
 //   } 
 // }
+
+//TASK 5
+/*
+Завдання 1
+Натискання на кнопку "SHOW ME" має виводити значення з поля введення (дивіться на елементи в html-розмітці)
+*/
+
+const inputElement = document.querySelector('#alertInput');
+const btnElement = document.querySelector('#alertButton');
+
+btnElement.addEventListener("click", showText);
+
+function showText() {
+    if (inputElement.value === "") return alert("Пустий рядок");
+
+    alert(inputElement.value);
+    inputElement.value = "";
+    
+}
