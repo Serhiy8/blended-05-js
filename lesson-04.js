@@ -129,7 +129,7 @@
 //   } else {
 //     inputEl.style.color = 'transparent';
 //     btnEl.textContent = 'Розкрити';
-//   } 
+//   }
 // }
 
 //TASK 5
@@ -138,15 +138,30 @@
 Натискання на кнопку "SHOW ME" має виводити значення з поля введення (дивіться на елементи в html-розмітці)
 */
 
-const inputElement = document.querySelector('#alertInput');
-const btnElement = document.querySelector('#alertButton');
+// const inputElement = document.querySelector('#alertInput');
+// const btnElement = document.querySelector('#alertButton');
 
-btnElement.addEventListener("click", showText);
+// btnElement.addEventListener("click", showText);
 
-function showText() {
-    if (inputElement.value === "") return alert("Пустий рядок");
+// function showText() {
+//     if (inputElement.value === "") return alert("Пустий рядок");
 
-    alert(inputElement.value);
-    inputElement.value = "";
-    
+//     alert(inputElement.value);
+//     inputElement.value = "";
+
+// }
+
+/*
+Завдання 6
+Натиснувши кнопку "Подвоювати", збільшити значення
+у кожному елементі списку у 2 рази
+*/
+
+const items = document.querySelectorAll(".listItem");
+const btn = document.querySelector("#double");
+
+btn.addEventListener("click", doubleItem);
+
+function doubleItem() {
+  items.forEach((el) => (el.textContent *= 2));
 }
